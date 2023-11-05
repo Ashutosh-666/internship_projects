@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="style.css">
+
+    <title>Temperature Converter</title>
+  </head>
+
+  <body>
+
+    <!-- Vidoes will be chnaged according to the Temperature -->
+
+    <video autoplay muted loop id="default-video">
+        <source src="src/default.mp4" type="video/mp4">
+    </video>
+    <video autoplay muted loop id="summer-video">
+        <source src="src/summerseason.mp4" type="video/mp4">
+    </video>
+    <video autoplay muted loop id="auttum-video">
+        <source src="src/auttum.mp4" type="video/mp4">
+    </video>
+    <video autoplay muted loop id="winter-video">
+        <source src="src/winter.mp4" type="video/mp4">
+    </video>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card card-body text-center pt-4">
+                        <h1 id="heading" class="pb-4 display-5">
+                            Temperature Converter
+                        </h1>
+                        <!-- Main form -->
+                        <form id="temp-form">
+
+                            <!-- Input Elements -->
+                            <div class="form-group pt-2">
+                                <select id="tempUnit" class="form-select" aria-label="Default select example">
+                                    <option selected>Select Your Desire Temperature Unit</option>
+                                    <option value="fahrenheit">Fahrenheit</option>
+                                    <option value="celsius">Celsius</option>
+                                    <option value="kelvin">Kelvin</option>
+                                    <option value="rankine">Rankine</option>
+                                </select>
+                            </div>
+                            <div class="form-group pt-2">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="UIinputValue" placeholder="Enter Your Value">
+                                    <span class="input-group-text" id="UIinputValueUnit"></span>
+                                </div>
+                            </div>
+                            <div class="form-group d-grid pt-4">
+                                <input type="submit" value="Calculate" class="btn btn-dark calculateBtn">
+                            </div>
+                        </form>
+
+                        <!-- Results -->
+                        <div class="form-group pt-4">
+                            <div class="input-group pt-1">
+                                <span class="input-group-text"> Value In Celsius:</span>
+                                <input type="number" class="form-control" id="result-celsius" disabled><span class="input-group-text">&deg;C</span>
+                            </div>
+                            <div class="input-group pt-1">
+                                <span class="input-group-text"> Value In Fahrenheit:</span>
+                                <input type="number" class="form-control" id="result-fahrenheit" disabled>
+                                <span class="input-group-text">&deg;F</span>
+                            </div>
+                            <div class="input-group pt-1">
+                                <span class="input-group-text"> Value In Kelvin:</span>
+                                <input type="number" class="form-control" id="result-kelvin" disabled>
+                                <span class="input-group-text">&deg;K</span>
+                            </div>
+                            <div class="input-group pt-1">
+                                <span class="input-group-text"> Value In Rankine:</span>
+                                <input type="number" class="form-control" id="result-rankine" disabled>
+                                <span class="input-group-text">&deg;R</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="footer">
+        <h6>Made with &#10084; by <a href="https://www.linkedin.com/in/ashutosh-kumar-pathak-aa363b1b6" target="_blank">Ashutosh Kumar Pathak</a></h6>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
